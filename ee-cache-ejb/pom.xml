@@ -7,9 +7,7 @@
     <artifactId>ee-cache-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>org.slashdev</groupId>
   <artifactId>ee-cache-ejb</artifactId>
-  <version>1.0-SNAPSHOT</version>
   <name>ee-cache-ejb</name>
   <packaging>ejb</packaging>
 
@@ -35,6 +33,25 @@
     <dependency>
       <groupId>org.ehcache</groupId>
       <artifactId>ehcache</artifactId>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-jar-plugin</artifactId>
+	        <version>3.0.2</version>
+	        <configuration>
+	          <archive>
+	            <manifest>
+	              <addClasspath>true</addClasspath>
+	            </manifest>
+	          </archive>
+	        </configuration>
+      </plugin>
+
+  	</plugins>
+  </build>
 </project>

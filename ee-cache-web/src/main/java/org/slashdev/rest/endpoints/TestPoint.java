@@ -5,8 +5,10 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-@Path("test")
+@Path(TestPoint.ROOT)
 public class TestPoint {
+	
+	protected static final String ROOT = "/test";
 
     @GET
     @Produces("text/html")
